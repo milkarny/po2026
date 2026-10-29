@@ -32,6 +32,15 @@ public class CodingBat {
         }
         return sum;
     }
+    public String firstHalf(String str) {
+        int dlugosc=str.length();
+        String polowa="";
+        for(int i=0; i<dlugosc/2; i++) {
+            polowa=polowa+str.charAt(i);
+        }
+        return polowa;
+    }
+
 
     public static void main(String[] args) {
         CodingBat cb=new CodingBat();
@@ -46,5 +55,9 @@ public class CodingBat {
         System.out.println(cb.sum13(new int[]{1,2,2,1}));
         System.out.println(cb.sum13(new int[]{1,1}));
         System.out.println(cb.sum13(new int[]{1,2,2,1,13}));
+
+        System.out.println(cb.firstHalf("WooHoo"));
+        System.out.println(cb.firstHalf("HelloThere"));
+        System.out.println(cb.firstHalf("abcdef"));
     }
 }
