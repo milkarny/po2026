@@ -20,15 +20,18 @@ public class CodingBat {
     }
 
     public int sum13(int[] nums) {
-        int sum = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i]!=13){
-                sum=sum+nums[i];
+        int sum=0;
+        for(int i=0; i<nums.length; i++) {
+            if(nums[i]==13) {
+                continue;
             }
-            else{
-                break;
+            if(i>0 && nums[i-1]==13) {
+                continue;
             }
+            sum=sum+nums[i];
         }
+        return sum;
+    }
 
     public static void main(String[] args) {
         CodingBat cb=new CodingBat();
@@ -39,5 +42,9 @@ public class CodingBat {
         System.out.println(cb.loneTeen(13,99));
         System.out.println(cb.loneTeen(21,19));
         System.out.println(cb.loneTeen(13,13));
+
+        System.out.println(cb.sum13(new int[]{1,2,2,1}));
+        System.out.println(cb.sum13(new int[]{1,1}));
+        System.out.println(cb.sum13(new int[]{1,2,2,1,13}));
     }
 }
