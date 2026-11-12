@@ -9,4 +9,9 @@ public class Parrot extends Animal {
     public String getDescription() {
         return "Papuga "+name+", nogi: "+legs;
     }
+
+    @Override
+    public void makeSound() {
+        System.out.println("Papuga "+name+": Cwir cwir");
+    }
 }

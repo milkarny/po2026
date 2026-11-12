@@ -14,4 +14,6 @@ public abstract class Animal {
     }
 
     public abstract String getDescription();
+
+    public abstract void makeSound();
 }

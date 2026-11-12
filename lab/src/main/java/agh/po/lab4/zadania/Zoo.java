@@ -38,8 +38,10 @@ public class Zoo {
 
         for(int i=0;i<zoo.animals.length;i++) {
             Animal animal=zoo.animals[i];
+            int legs=animal.getLegs();
             String description=animal.getDescription();
             System.out.println(description);
+            animal.makeSound();
         }
     }
 }
