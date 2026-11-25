@@ -1,16 +1,26 @@
 package agh.po.symulator;
 
 public class Pozycja {
-    protected double x;
-    protected double y;
-    public void aktualnaPozycja(double deltaX, double deltaY){
-        this.x=this.x+deltaX;
-        this.y=this.y+deltaY;
-    }
-    public String getPozycja(){
-        String pozX= String.valueOf(this.x);
-        String pozY= String.valueOf(this.y);
-        return pozX+' '+pozY;
+    private double x;
+    private double y;
+
+    public Pozycja() {
+        x=0;
+        y=0;
     }
 
+    public Pozycja(double x, double y) {
+        this.x=x;
+        this.y=y;
+    }
+
+    public void aktualizujPozycję(double deltaX, double deltaY) {
+        x=x+deltaX;
+        y=y+deltaY;
+    }
+
+    public String getPozycja() {
+        return "("+x+", "+y+")";
+    }
 }
+

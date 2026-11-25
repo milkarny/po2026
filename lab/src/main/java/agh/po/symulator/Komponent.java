@@ -1,5 +1,24 @@
 package agh.po.symulator;
 
 public class Komponent {
-    protected String producent;
+    private String producent;
+    private String model;
+
+    public Komponent() {
+        producent="Brak";
+        model="Brak";
+    }
+
+    public Komponent(String producent, String model) {
+        this.producent=producent;
+        this.model=model;
+    }
+
+    public String getProducent() {
+        return producent;
+    }
+
+    public String getModel() {
+        return model;
+    }
 }
